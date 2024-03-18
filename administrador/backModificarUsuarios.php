@@ -1,6 +1,6 @@
 <?php
 
-$id_usuario = $_POST['id_usuario_m'];
+$id_usuario = $_POST['id_usuario_m']; /*[]; -> name*/
 $nombre = $_POST['nombre_modify'];
 $apellido = $_POST['apellido_modify'];
 $email = $_POST['email_modify'];
@@ -23,9 +23,20 @@ move_uploaded_file($rutaTemporal, $rutaDestino);
 
 include "../conexion.php";
 
-$sql = "UPDATE usuarios SET nombre = '$nombre', apellido = '$apellido', email = '$email', telefono = '$tel', 
+/*$sql = "UPDATE usuarios SET nombre = '$nombre', apellido = '$apellido', email = '$email', telefono = '$tel', 
         rol = '$rol', usuario = '$usuario', password = '$password', foto = '$nombreFoto' 
-        WHERE id = '$id_usuario'"; 
+        WHERE id = '$id_usuario'"; */
+        if (!empty($password)) {
+            // Si se proporcionó una nueva contraseña, actualizar el campo password en la consulta SQL
+            $sql = "UPDATE usuarios SET nombre = '$nombre', apellido = '$apellido', email = '$email', telefono = '$tel', 
+                rol = '$rol', usuario = '$usuario', password = '$password', foto = '$nombreFoto' 
+                WHERE id = '$id_usuario'";
+        } else {
+            // Si no se proporcionó una nueva contraseña, omitir la actualización del campo password en la consulta SQL
+            $sql = "UPDATE usuarios SET nombre = '$nombre', apellido = '$apellido', email = '$email', telefono = '$tel', 
+                rol = '$rol', usuario = '$usuario', foto = '$nombreFoto' 
+                WHERE id = '$id_usuario'";
+        }
 
 $result = $conn->query($sql);
  

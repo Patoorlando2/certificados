@@ -170,30 +170,30 @@ if ($result->num_rows > 0) {
 
     <div class="row">
     <form action="backModificarUsuarios.php" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="id_usuario_m" value="$id_usuario">
+    <input type="hidden" name="id_usuario_m" value="<?=$id_usuario?>">
 
     <div class="col-lg-12">
         <!-- Nombre -->
         <label for="nombre" class="form-label">Nombre:</label>
-        <input class="form-control" type="text" name="nombre_modify" value='<?=$nombre?>' />
+        <input class="form-control" type="text" name="nombre_modify" value="<?=$nombre?>" />
     </div>
 
     <div class="col-lg-12">
         <!-- Apellido -->
         <label for="apellido" class="form-label">Apellido:</label>
-        <input class="form-control" type="text" placeholder="Apellido" name="apellido_modify" value='<?=$apellido?>' />
+        <input class="form-control" type="text" placeholder="Apellido" name="apellido_modify" value="<?=$apellido?>" />
     </div>
 
     <div class="col-lg-12">
         <!--E-mail -->
         <label for="email" class="form-label">E-mail:</label>
-        <input class="form-control" type="text" placeholder="E-mail" name="email_modify" value='<?=$email?>' />
+        <input class="form-control" type="text" placeholder="E-mail" name="email_modify" value="<?=$email?>"/>
     </div>
 
     <div class="col-lg-12">
         <!--Telefono -->
         <label for="telefono" class="form-label">Teléfono:</label>
-        <input class="form-control" type="tel" placeholder="Teléfono" name="tel_modify" value='<?=$tel?>' />
+        <input class="form-control" type="tel" placeholder="Teléfono" name="tel_modify" value="<?=$tel?>"/>
     </div>
 
     <div class="col-lg-12">
@@ -208,19 +208,19 @@ if ($result->num_rows > 0) {
     <div class="col-lg-12">
         <!--Usuario: -->
         <label for="usuario" class="form-label">Usuario:</label>
-        <input class="form-control" type="text" placeholder="Usuario" name="usuario_modify" value='<?=$usuario?>' />
+        <input class="form-control" type="text" placeholder="Usuario" name="usuario_modify" value="<?=$usuario?>" />
     </div>
 
     <!--Password-->
     <div class="col-lg-12">   
         <label for="password" class="form-label">Password:</label>
-        <input class="form-control" type="password" placeholder="Password" name="password_modify" value='<?= $password?>' />
+        <input class="form-control" type="password" placeholder="Password" name="password_modify" value="<?=$password?>" />
     </div>
 
     <div class="col-lg-12">
         <!--Password -->
         <label for="foto" class="form-label">Foto:</label>
-        <input class="form-control" type="file" placeholder="Foto" name="foto_modify" value='<?=$foto?>' />
+        <input class="form-control" type="file" placeholder="Foto" name="foto_modify" value="<?=$foto?>" />
     </div>
     
     
@@ -234,6 +234,7 @@ if ($result->num_rows > 0) {
     </form>
     </div> <!-- row -->
 </div> <!-- container -->
+
 <?php
 } else {
     echo "Usuario no encontrado";

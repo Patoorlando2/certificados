@@ -152,26 +152,25 @@ if ($row['rol'] !== 'administrador') {
 
     // Realizar la consulta para obtener el nombre y el DNI del alumno
     include '../conexion.php';
-    $query = "SELECT nombres, cedula FROM alumnos WHERE id = '$id'";
+    $query = "SELECT nombre FROM usuarios WHERE id = '$id'";
     $result = $conn->query($query);
 
     if ($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $nombreAlumno = $row['nombres'];
-        $dniAlumno = $row['cedula'];
+        $nombreUsuario = $row['nombre'];
+        //$dniAlumno = $row['cedula'];
     } else {
-        $nombreAlumno = '';
-        $dniAlumno = '';
+      $nombreUsuario = '';
     }
     ?>
             <form action="back_eliminar_datos.php" method="post">
             <input type="hidden" name="id" value="<?php echo isset($_GET['id']) ? htmlspecialchars($_GET['id']) : ''; ?>">
 
-                <h6 class="text-center">Se eliminará el alumno <?php echo $nombreAlumno; ?>(Cédula: <?php echo $dniAlumno; ?>)</h6><br>
+                <h6 class="text-center">Se eliminará el usuario <?php echo $nombreUsuario;?></h6><br>
                 <div class="container">
                   <div class="row">
                     <div class="col-lg-12">
-                      <button type="submit" class="btn btn-danger" name="confirmar_baja"> Confirmar Baja</button>
+                      <button type="submit" class="btn btn-danger" name="confirmar_baja">Confirmar Baja</button>
                       <a href="sesion_iniciada.php" class="btn btn-outline-secondary">
                           Volver a Inicio
                       </a>
