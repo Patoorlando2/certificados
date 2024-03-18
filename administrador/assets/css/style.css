@@ -1,0 +1,18 @@
+.open-sans-style{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a.nav-link{
+  color:grey;
+  
+}
+a.nav-link:hover{
+  color:black;
+}
+.nav.nav-pills.nav-fill{
+  background-color: #F9F6F6;
+}
+
