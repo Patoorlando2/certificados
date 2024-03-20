@@ -152,32 +152,32 @@ if ($row['rol'] !== 'administrador') {
 			    <th scope="col">#</th>
       			<th scope="col">Nombre</th>
       			<th scope="col">Apellido</th>
-     	 		<th scope="col">E-mail</th>
+     	 		  <th scope="col">E-mail</th>
       			<th scope="col">Teléfono</th>
       			<th scope="col">Rol</th>
       			<th scope="col">Usuario</th>
-                <th scope="col">Password</th>
-                <th scope="col">Foto</th>
+            <th scope="col">Password</th>
+            <th scope="col">Foto</th>
     		</tr>
   		</thead>
   		<tbody>
-		<?php 
-		while ($rows = $results->fetch_assoc()){ ?>
-    		<tr>
-				<td><?= $rows['id'] ?></th>
-      			<td><?= $rows['nombre'] ?></th>
+		  <?php 
+		    while ($rows = $results->fetch_assoc()){ ?>
+    		  <tr>
+				    <td><?= $rows['id'] ?></td>
+      			<td><?= $rows['nombre'] ?></td>
       			<td><?= $rows['apellido'] ?></td>
       			<td><?= $rows['email'] ?></td>
       			<td><?= $rows['telefono'] ?></td>
       			<td><?= $rows['rol'] ?></td>
       			<td><?= $rows['usuario'] ?></td>
-                <td><?= $rows['password'] ?></td>
-                <td><?= $rows['foto'] ?></td>
-				<td>
-              		<a class="btn btn-primary" href="formModificarUsuarios.php?id=<?= $rows['id']?>">Modificar usuario</a>
-            	</td>
-			</tr>
-			<?php } ?>
+            <td><?= $rows['password'] ?></td>
+            <td><?= $rows['foto'] ?></td>
+				    <td><a class="btn btn-primary" href="formModificarUsuarios.php?id=<?= $rows['id']?>">Modificar usuario</a></td>
+			    </tr>
+			<?php 
+        } 
+      ?>
   		</tbody>
 	</table>
 

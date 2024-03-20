@@ -1,8 +1,9 @@
-<?php 
+<?php
 
 $id = $_POST['id'];
 
 if (isset($_POST['confirmar_baja'])) {
+
 
     include '../conexion.php';
 
@@ -20,5 +21,6 @@ if (isset($_POST['confirmar_baja'])) {
     header("Location: eliminar_usuarios.php");
     }
 }
+?>
 
 

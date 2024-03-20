@@ -50,15 +50,6 @@ $path = "assets/img/";
         </div>
     </div>
 
-    <!--volver
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 bg-light">
-                <a class="btn btn-primary" href="../index.php" role="button">Volver</a>    
-            </div>
-        </div>
-    </div> -->
-
     <ul class="nav nav-pills nav-fill p-3">
     
   <li class="nav-item">
@@ -164,18 +155,18 @@ $path = "assets/img/";
 		<?php 
 		while ($rows = $results->fetch_assoc()){ ?>
     		<tr>
-				<td><?= $rows['id'] ?></th>
-      			<td><?= $rows['nombre'] ?></th>
+				<td><?= $rows['id'] ?></td>
+      			<td><?= $rows['nombre'] ?></td>
       			<td><?= $rows['apellido'] ?></td>
       			<td><?= $rows['email'] ?></td>
-      			<td><?= $rows['Teléfono'] ?></td>
-      			<td><?= $rows['Rol'] ?></td>
-      			<td><?= $rows['Usuario'] ?></td>
-                <td><?= $rows['Password'] ?></td>
-                <td><?= $rows['Foto'] ?></td>
+      			<td><?= $rows['telefono'] ?></td>
+      			<td><?= $rows['rol'] ?></td>
+      			<td><?= $rows['usuario'] ?></td>
+                <td><?= $rows['password'] ?></td>
+                <td><?= $rows['foto'] ?></td>
 
 				<td>
-              		<a class="btn btn-primary" href="confirm_eliminar_datos.php?id=<?= $rows['id']?>">Eliminar</a>
+              		<a class="btn btn-primary" href="confirm_eliminar_usuarios.php?id=<?= $rows['id']?>">Eliminar</a>
             	</td>
                 <!--<td>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
