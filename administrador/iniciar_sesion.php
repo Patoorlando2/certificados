@@ -73,14 +73,14 @@ if (isset($_SESSION['registro'])) {
                     
             <div class="col-lg-12 mt-3">
             <!--<a href="" class="mt-3">Olvidé la contraseña</a>-->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Olvidé la contraseña</button>
+            <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Olvidé la contraseña</button>-->
             </div>      
         </div>
     </div>  
 <br />
 <br />
 
-<!-- prueba modal -->
+<!-- prueba modal 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -102,7 +102,7 @@ if (isset($_SESSION['registro'])) {
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- prueba modal -->
 
 
